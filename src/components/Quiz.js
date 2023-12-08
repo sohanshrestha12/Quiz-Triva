@@ -69,7 +69,8 @@ const Quiz = () => {
     <div>
       {console.log(counter.count)}
       {counter.count > 10 ? (
-        <div className="container">
+        <div className="container" style={{flexDirection:'column'}}>
+            <h1 style={{textAlign:'center'}}>Your Result</h1>
           <div className="box">
             <h2>Your Score</h2>
             <h5 style={{fontSize:'22px'}}>{counter.usercorrectAnswer}</h5>
@@ -77,7 +78,7 @@ const Quiz = () => {
         </div>
       ) : (
         <>
-          <h1>Quiz</h1>
+          <h1 style={{textAlign:'center',margin:'20px 0 0 0'}}>Quiz</h1>
           {data[0] && data[0].question && (
             <div className="container">
               <div className="quiz">

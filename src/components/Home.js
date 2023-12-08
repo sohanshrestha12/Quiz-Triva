@@ -34,16 +34,18 @@ const Home = () => {
   }, []);
   return (
     <>
-      <h1>Welcome to the Quiz</h1>
-      <h2>Please select the Category</h2>
+      <h1 style={{marginTop:'20px',fontSize:'50px', textAlign: "center" }}>Welcome to the Quiz</h1>
+      <h2 style={{ textAlign: "center" }}>Please select the Category</h2>
       <div className="container">
         {filteredTags.map((item, index) => {
-          return <Link
-            key={index}
-            to={`/difficulty?tag=${encodeURIComponent(item.key)}`}
-          >
-            <Tags data={item} />;
-          </Link>
+          return (
+            <Link
+              key={index}
+              to={`/difficulty?tag=${encodeURIComponent(item.key)}`}
+            >
+              <Tags data={item} />;
+            </Link>
+          );
         })}
       </div>
     </>
